@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="958" leftMargin="30" rightMargin="20" topMargin="20" bottomMargin="20" uuid="05e6851a-9bc3-40ae-a3fd-de64137491fd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT idpengguna AS "ID Pengguna", namalengkap AS "Nama Lengkap", namapengguna AS "Nama Pengguna", katakunci AS "Kata Kunci", tanggalmulai AS "Tanggal Mulai", tanggalberakhir AS "Tanggal Berakhir" FROM pengguna]]>
+	</queryString>
+	<field name="ID Pengguna" class="java.lang.Integer"/>
+	<field name="Nama Lengkap" class="java.lang.String"/>
+	<field name="Nama Pengguna" class="java.lang.String"/>
+	<field name="Kata Kunci" class="java.lang.String"/>
+	<field name="Tanggal Mulai" class="java.sql.Date"/>
+	<field name="Tanggal Berakhir" class="java.sql.Date"/>
+	<filterExpression><![CDATA[new Boolean(true)]]></filterExpression>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="399" y="29" width="285" height="20" uuid="4681ea3e-1e7b-4248-9017-af449e0f0d93"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lembar Laporan Tabel Pengguna]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="70" y="16" width="100" height="20" uuid="8d6d3cef-0dda-4406-8723-37d298e34ec9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Pengguna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="16" width="115" height="20" uuid="6ef8430a-8ffd-4005-b2e5-189641b21af1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Lengkap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="16" width="124" height="20" uuid="b6e85bb1-1982-43e2-9844-78b27a99265a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Pengguna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="551" y="16" width="85" height="20" uuid="c5d1c9b5-22e4-4ffe-9702-8dfc56cac8d4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kata Kunci]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="16" width="100" height="20" uuid="49817459-1b76-4d99-832e-e2f3da40573a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Mulai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="814" y="16" width="128" height="20" uuid="bffb97c6-78de-489b-862d-058ff67c4e00"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Berakhir]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="70" y="13" width="100" height="20" uuid="6f88d293-3a16-430c-aead-3fde4bdb1261"/>
+				<textFieldExpression><![CDATA[$F{ID Pengguna}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="13" width="100" height="20" uuid="3561a513-2a7f-4b6a-8389-1480293349f7"/>
+				<textFieldExpression><![CDATA[$F{Nama Lengkap}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="382" y="13" width="100" height="20" uuid="8b8a458c-9858-42b8-bd85-44e84e6cee88"/>
+				<textFieldExpression><![CDATA[$F{Nama Pengguna}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="556" y="13" width="80" height="20" uuid="6497efbd-98fc-4d7d-944b-0f262fbd9275"/>
+				<textFieldExpression><![CDATA[$F{Kata Kunci}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="13" width="100" height="20" uuid="a607cd84-c1a4-4888-a465-bbef88c2ef95"/>
+				<textFieldExpression><![CDATA[$F{Tanggal Mulai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="829" y="13" width="100" height="20" uuid="6ff6ab0c-5294-4b82-9663-bbbc971ea20a"/>
+				<textFieldExpression><![CDATA[$F{Tanggal Berakhir}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="50"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
